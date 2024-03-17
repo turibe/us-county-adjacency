@@ -1,5 +1,5 @@
-
-file:str = "census_county_adjacency.txt"
+import os
+import sys
 
 def process_file(fname:str, fout):
     lines:int = 0
@@ -29,7 +29,11 @@ def process_file(fname:str, fout):
     print(f"Read {lines} lines")
 
 if __name__ == "__main__":
-    with open("output", "w", encoding="utf-8") as fout:
-        process_file(file, fout)
-              
-        
+    input_file:str = "census_county_adjacency_fixed.txt"
+    output_file = "county_adjacency_fixed.tsv"
+    if os.path.isfile(output_file):
+        print(f"Error: Output file {output_file} exists, exiting\n")
+        sys.exit(1)
+    print(f"Writing to {output_file}")
+    with open(output_file, "w", encoding="utf-8") as foutput:
+        process_file(input_file, foutput)
