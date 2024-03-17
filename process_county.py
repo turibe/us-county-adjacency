@@ -1,7 +1,11 @@
+"""Convert the US Census county adjacency file into a tab-separated (TSV) file."""
+
 import os
 import sys
 
+
 def process_file(fname:str, fout):
+    """Process the US census file and produce a DB-friendly TSV file."""
     lines:int = 0
     sourcename = ""
     sourcezip = ""
@@ -25,15 +29,14 @@ def process_file(fname:str, fout):
             targetzip = parts[3]
             fout.write(f"{sourcename}\t{sourcezip}\t{targetname}\t{targetzip}")
             fout.flush()
-
     print(f"Read {lines} lines")
 
 if __name__ == "__main__":
     input_file:str = "census_county_adjacency_fixed.txt"
-    output_file = "county_adjacency_fixed.tsv"
-    if os.path.isfile(output_file):
-        print(f"Error: Output file {output_file} exists, exiting\n")
+    OUTPUT_FILE = "county_adjacency_fixed.tsv"
+    if os.path.isfile(OUTPUT_FILE):
+        print(f"Error: Output file {OUTPUT_FILE} exists, exiting\n")
         sys.exit(1)
-    print(f"Writing to {output_file}")
-    with open(output_file, "w", encoding="utf-8") as foutput:
+    print(f"Writing to {OUTPUT_FILE}")
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as foutput:
         process_file(input_file, foutput)
