@@ -1,6 +1,6 @@
 # us-county-adjacency
 
-United States County Adjacency Data, Fixed.
+United States County Adjacency Data, with corrections.
 
 ## Intro
 
@@ -11,7 +11,7 @@ This repo fixes them and adds a tab-separated (TSV) file.
 
 ### The typos
 
-Line 9629, that reads
+Line 9629, which reads
 ```
     27165	"Blue Earth County, MN"	27013
 ```
@@ -41,4 +41,5 @@ The original file uses `"ISO-8859-1"` . The TSV file uses `UTF-8`.
 
 ### Acknowledgements
 
+The Census file was similarly processed here, but includes the typos:
 https://data.world/markmarkoh/us-county-adjacency

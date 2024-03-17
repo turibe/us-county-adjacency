@@ -1,4 +1,4 @@
-"county_name"	"county_zip"	"adjacent_county_name"	"adjacent_county_zip"
+"county_name"	"county_id"	"adjacent_county_name"	"adjacent_county_id"
 "Autauga County, AL"	01001	"Autauga County, AL"	01001
 "Autauga County, AL"	01001	"Chilton County, AL"	01021
 "Autauga County, AL"	01001	"Dallas County, AL"	01047
