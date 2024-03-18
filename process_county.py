@@ -2,9 +2,9 @@
 
 import os
 import sys
+from typing import TextIO
 
-
-def process_file(fname:str, fout):
+def process_file(fname:str, fout:TextIO):
     """Process the US census file and produce a DB-friendly TSV file."""
     lines:int = 0
     sourcename = ""

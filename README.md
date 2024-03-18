@@ -4,10 +4,10 @@ United States County Adjacency Data, with corrections.
 
 ## Intro
 
-The US County Adjacency graph is a fun one to explore, but the text file from the US census 
+The US County Adjacency Graph is fun to explore, but the text file from the US census 
 (https://www.census.gov/programs-surveys/geography/library/reference/county-adjacency-file.html)
 has some typos (as of March 17, 2024).
-This repo fixes them and adds a tab-separated (TSV) file.
+This repo fixes them and adds a [tab-separated (TSV) file](https://github.com/turibe/us-county-adjacency/blob/main/county_adjacency.tsv).
 
 ### The typos
 
@@ -31,9 +31,10 @@ should be
 
 We also fix some inconsistent Spanish accent encodings (see `differences.diff`).
 
-### The TSV file
+### The tab-separated (TSV) file
 
-Running the Python 3 script `process_county.py` will produce a TSV file, with headers.
+The TSV file `county_adjacency.tsv` is the result of running the Python 3 script `process_county.py`,
+with `census_county_adjacency_fixed.txt` as its input.
 
 ### Encodings
 
