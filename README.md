@@ -29,7 +29,7 @@ should be
 "Otter Tail County, MN"	27111	"Becker County, MN"	27005
 ```
 
-We also fix some inconsistent Spanish accent encodings (see `differences.diff`).
+We also fix some inconsistent Spanish accent encodings (see [differences.diff](https://github.com/turibe/us-county-adjacency/blob/small_updates/differences.diff)).
 
 ### The tab-separated (TSV) file
 
